@@ -1,0 +1,2 @@
+debian/bin/buzzcoind usr/bin
+src/buzzcoind usr/lib/buzzcoin

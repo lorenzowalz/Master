@@ -1,6 +1,6 @@
 [Protocol]
-exec=mintcoin-qt '%u'
-protocol=mintcoin
+exec=buzzcoin-qt '%u'
+protocol=buzzcoin
 input=none
 output=none
 helper=true

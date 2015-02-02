@@ -1,4 +1,4 @@
-Source: mintcoin
+Source: buzzcoin
 Section: utils
 Priority: optional
 Maintainer: Irving A. Bermúdez S. <bigchirv@gmail.com>
@@ -19,14 +19,14 @@ Build-Depends: debhelper,
  libqrencode-dev
 Standards-Version: 3.9.2
 Homepage: http://mintcoin.cc/
-Vcs-Git: git://github.com/mintcoinproject/mintcoin.git
-Vcs-Browser: http://github.com/mintcoinproject/mintcoin
+Vcs-Git: https://github.com/BuzzCoin/Master.git
+Vcs-Browser: https://github.com/BuzzCoin/Master.git
 
-Package: mintcoind
+Package: buzzcoind
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- mintcoin is a free open source peer-to-peer electronic cash system that
+ buzzcoin is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -37,14 +37,14 @@ Description: peer-to-peer network based digital currency - daemon
  Full transaction history is stored locally at each client.  This
  requires 2+ GB of space, slowly growing.
  .
- This package provides mintcoind, a combined daemon and CLI tool to
+ This package provides buzzcoind, a combined daemon and CLI tool to
  interact with the daemon.
 
-Package: mintcoin-qt
+Package: buzzcoin-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- mintcoin is a free open source peer-to-peer electronic cash system that
+ buzzcoin is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -55,4 +55,4 @@ Description: peer-to-peer network based digital currency - Qt GUI
  Full transaction history is stored locally at each client.  This
  requires 2+ GB of space, slowly growing.
  .
- This package provides Mintcoin-Qt, a GUI for mintcoin based on Qt.
+ This package provides Buzzcoin-Qt, a GUI for buzzcoin based on Qt.

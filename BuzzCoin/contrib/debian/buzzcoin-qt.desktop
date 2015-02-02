@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BuzzCoin
+Comment=BuzzCoin P2P Cryptocurrency
+Comment[fr]=BuzzCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BuzzCoin, eşten eşe kriptografik sanal para birimi
+Comment[es]=BuzzCoin, una criptomoneda P2P
+Exec=/usr/bin/buzzcoin-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/bitcoin80.xpm
+MimeType=x-scheme-handler/buzzcoin;
+Categories=Office;

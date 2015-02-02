@@ -1,10 +1,10 @@
 
-Copyright (c) 2013-2014 MintCoin Developers
+Copyright (c) 2015 BuzzCoin Developers
 
 
-MintCoin 0.3.0 BETA
+BuzzCoin 0.3.0 BETA
 
-Copyright (c) 2013-2014 MintCoin Developers
+Copyright (c) 2015 BuzzCoin Developers
 Copyright (c) 2013 NovaCoin Developers
 Copyright (c) 2011-2012 Bitcoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
@@ -16,7 +16,7 @@ cryptographic software written by Eric Young (eay@cryptsoft.com).
 
 Intro
 -----
-MintCoin is a free open source project derived from NovaCoin, with
+BuzzCoin is a free open source project derived from NovaCoin, with
 the goal of providing a long-term energy-efficient scrypt-based crypto-currency.
 Built on the foundation of Bitcoin and NovaCoin, innovations such as proof-of-stake
 help further advance the field of crypto-currency.
@@ -25,9 +25,9 @@ Setup
 -----
 After completing windows setup then run windows command line (cmd)
   cd daemon
-  mintcoind
-You would need to create a configuration file mintcoin.conf in the default
-wallet directory. Grant access to mintcoind.exe in anti-virus and firewall
+  buzzcoind
+You would need to create a configuration file buzzcoin.conf in the default
+wallet directory. Grant access to buzzcoind.exe in anti-virus and firewall
 applications if necessary.
 
 The software automatically finds other nodes to connect to.  You can
@@ -40,13 +40,13 @@ Upgrade
 -------
 All you existing coins/transactions should be intact with the upgrade.
 To upgrade first backup wallet
-mintcoind backupwallet <destination_backup_file>
-Then shutdown mintcoind by
-mintcoind stop
-Start up the new mintcoind.
+buzzcoind backupwallet <destination_backup_file>
+Then shutdown buzzcoind by
+buzzcoind stop
+Start up the new buzzcoind.
 
 
-See the documentation/wiki at the MintCoin site:
-  http://mintcoin.cc/
+See the documentation/wiki at the BuzzCoin site:
+  
 for help and more information.
 
