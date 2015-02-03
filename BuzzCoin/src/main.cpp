@@ -972,19 +972,19 @@ int64 GetProofOfStakeReward(int64 nCoinAge, unsigned int nBits, unsigned int nTi
 
 	nRewardCoinYear = MAX_MINT_PROOF_OF_STAKE;
 
-	if(nHeight < YEARLY_BLOCKCOUNT)
+	if(nBalance > 99999) && (nHeight < YEARLY_BLOCKCOUNT)
 		nRewardCoinYear = 24 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nHeight < (2 * YEARLY_BLOCKCOUNT))
+	else if(nBalance > 99999) && (nHeight < (2 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 18 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nHeight < (3 * YEARLY_BLOCKCOUNT))
+	else if(nBalance > 99999) && (nHeight < (3 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 12 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nHeight < (4 * YEARLY_BLOCKCOUNT))
+	else if(nBalance > 99999) && (nHeight < (4 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 6 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nHeight < (5 * YEARLY_BLOCKCOUNT))
+	else if(nBalance > 99999) && (nHeight < (5 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 4.8 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nHeight < (6 * YEARLY_BLOCKCOUNT))
+	else if(nBalance > 99999) && (nHeight < (6 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 3.6 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nHeight < (7 * YEARLY_BLOCKCOUNT))
+	else if(nBalance > 99999) && (nHeight < (7 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 2.4 * MAX_MINT_PROOF_OF_STAKE;
 
     int64 nSubsidy = nCoinAge * nRewardCoinYear / 365;
