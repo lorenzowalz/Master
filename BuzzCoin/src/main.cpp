@@ -936,7 +936,7 @@ int generateMTRandom(unsigned int s, int range)
 
 
 static const int64 nMinSubsidy = 1 * COIN;
-static const int CUTOFF_HEIGHT = 100800;	// Height at the end of 5 weeks
+static const int CUTOFF_HEIGHT = 504000;	// Height at the end of 5 weeks
 // miner's coin base reward based on nBits
 int64 GetProofOfWorkReward(int nHeight, int64 nFees, uint256 prevHash)
 {
@@ -966,7 +966,7 @@ int64 GetProofOfWorkReward(int nHeight, int64 nFees, uint256 prevHash)
 // miner's coin stake reward based on nBits and coin age spent (coin-days)
 // simple algorithm, not depend on the diff
 const int YEARLY_BLOCKCOUNT = 1051200;	// 365 * 2880
-int64 GetProofOfStakeReward(int64 nCoinAge, unsigned int nBits, unsigned int nTime, int64 nBalance, int nHeight)
+int64 GetProofOfStakeReward(int64 nCoinAge, int64 nBalance, unsigned int nBits, unsigned int nTime, int nHeight)
 {
     int64 nRewardCoinYear;
 
