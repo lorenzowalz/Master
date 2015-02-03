@@ -41,7 +41,7 @@ static CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 static CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 20);
 static CBigNum bnProofOfStakeLimitTestNet(~uint256(0) >> 20);
 
-unsigned int nStakeMinAge = 60 * 60 * 24 * 1;	// minimum age for coin age: 20d
+unsigned int nStakeMinAge = 60 * 60 * 24 * 30;	// minimum age for coin age: 30d
 unsigned int nStakeMaxAge = 60 * 60 * 24 * 40;	// stake age of full weight: 40d
 unsigned int nStakeTargetSpacing = 30;			// 30 sec block spacing
 
@@ -940,7 +940,7 @@ static const int CUTOFF_HEIGHT = 100800;	// Height at the end of 5 weeks
 // miner's coin base reward based on nBits
 int64 GetProofOfWorkReward(int nHeight, int64 nFees, uint256 prevHash)
 {
-	int64 nSubsidy = 1 * COIN;
+	int64 nSubsidy = 5 * COIN;
 
 	if(nHeight == 1)
 	{
@@ -973,11 +973,19 @@ int64 GetProofOfStakeReward(int64 nCoinAge, unsigned int nBits, unsigned int nTi
 	nRewardCoinYear = MAX_MINT_PROOF_OF_STAKE;
 
 	if(nHeight < YEARLY_BLOCKCOUNT)
-		nRewardCoinYear = 4 * MAX_MINT_PROOF_OF_STAKE;
+		nRewardCoinYear = 24 * MAX_MINT_PROOF_OF_STAKE;
 	else if(nHeight < (2 * YEARLY_BLOCKCOUNT))
-		nRewardCoinYear = 3 * MAX_MINT_PROOF_OF_STAKE;
+		nRewardCoinYear = 18 * MAX_MINT_PROOF_OF_STAKE;
 	else if(nHeight < (3 * YEARLY_BLOCKCOUNT))
-		nRewardCoinYear = 2 * MAX_MINT_PROOF_OF_STAKE;
+		nRewardCoinYear = 12 * MAX_MINT_PROOF_OF_STAKE;
+	else if(nHeight < (4 * YEARLY_BLOCKCOUNT))
+		nRewardCoinYear = 6 * MAX_MINT_PROOF_OF_STAKE;
+	else if(nHeight < (5 * YEARLY_BLOCKCOUNT))
+		nRewardCoinYear = 4.8 * MAX_MINT_PROOF_OF_STAKE;
+	else if(nHeight < (6 * YEARLY_BLOCKCOUNT))
+		nRewardCoinYear = 3.6 * MAX_MINT_PROOF_OF_STAKE;
+	else if(nHeight < (7 * YEARLY_BLOCKCOUNT))
+		nRewardCoinYear = 2.4 * MAX_MINT_PROOF_OF_STAKE;
 
     int64 nSubsidy = nCoinAge * nRewardCoinYear / 365;
 
