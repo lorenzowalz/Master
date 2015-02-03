@@ -966,25 +966,25 @@ int64 GetProofOfWorkReward(int nHeight, int64 nFees, uint256 prevHash)
 // miner's coin stake reward based on nBits and coin age spent (coin-days)
 // simple algorithm, not depend on the diff
 const int YEARLY_BLOCKCOUNT = 1051200;	// 365 * 2880
-int64 GetProofOfStakeReward(int64 nCoinAge, unsigned int nBits, unsigned int nTime, int nHeight)
+int64 GetProofOfStakeReward(int64 nCoinAge, unsigned int nBits, unsigned int nTime, int nBalance, int nHeight)
 {
     int64 nRewardCoinYear;
 
 	nRewardCoinYear = MAX_MINT_PROOF_OF_STAKE;
 
-	if(nBalance > 99999) && (nHeight < YEARLY_BLOCKCOUNT)
+	if(nBalance => 100000) && (nHeight < YEARLY_BLOCKCOUNT)
 		nRewardCoinYear = 24 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nBalance > 99999) && (nHeight < (2 * YEARLY_BLOCKCOUNT))
+	else if(nBalance => 100000) && (nHeight < (2 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 18 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nBalance > 99999) && (nHeight < (3 * YEARLY_BLOCKCOUNT))
+	else if(nBalance => 100000) && (nHeight < (3 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 12 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nBalance > 99999) && (nHeight < (4 * YEARLY_BLOCKCOUNT))
+	else if(nBalance => 100000) && (nHeight < (4 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 6 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nBalance > 99999) && (nHeight < (5 * YEARLY_BLOCKCOUNT))
+	else if(nBalance => 100000) && (nHeight < (5 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 4.8 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nBalance > 99999) && (nHeight < (6 * YEARLY_BLOCKCOUNT))
+	else if(nBalance => 100000) && (nHeight < (6 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 3.6 * MAX_MINT_PROOF_OF_STAKE;
-	else if(nBalance > 99999) && (nHeight < (7 * YEARLY_BLOCKCOUNT))
+	else if(nBalance => 100000) && (nHeight < (7 * YEARLY_BLOCKCOUNT))
 		nRewardCoinYear = 2.4 * MAX_MINT_PROOF_OF_STAKE;
 
     int64 nSubsidy = nCoinAge * nRewardCoinYear / 365;
